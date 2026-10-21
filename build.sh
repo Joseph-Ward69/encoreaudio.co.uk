@@ -29,6 +29,8 @@ for src in src/*.html; do
   <nav class="main">
     <a href="/"$(cur home)>Home</a>
     <a href="/beta.html"$(cur beta)>Beta</a>
+    <a href="/roadmap.html"$(cur roadmap)>Roadmap</a>
+    <a href="/milestones.html"$(cur milestones)>Milestones</a>
     <a href="/faq.html"$(cur faq)>Questions</a>
   </nav>
 </div></header>
@@ -40,7 +42,7 @@ EOF
 <footer class="site"><div class="wrap">
   <div>&copy; 2026 Winston Joseph-Ward. Encore Audio is a trade mark of Winston Joseph-Ward.<br>
   <a href="mailto:contact@encoreaudio.co.uk">contact@encoreaudio.co.uk</a></div>
-  <nav><a href="/beta.html">Beta</a><a href="/faq.html">Questions</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
+  <nav><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
 </div></footer>
 </body>
 </html>
