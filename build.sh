@@ -7,10 +7,13 @@ LOGO='<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" h
 # Beta page: beta-state holds "open" (applications, with the form link from apply-url) or "closed" (the beta is full).
 STATE=$(tr -d '\r\n ' < beta-state 2>/dev/null || echo open)
 APPLY=$(tr -d '\r\n ' < apply-url 2>/dev/null)
+# form-url: the Formspree endpoint that the contact and beta application forms post to.
+FORM=$(tr -d '\r\n ' < form-url 2>/dev/null)
 for src in src/*.html; do
   case "$(basename "$src")" in _*) continue;; esac
-  [ "$(basename "$src")" = beta.html ] && [ "$STATE" = closed ] && src=src/_beta-closed.html
   name=$(basename "$src")
+  # When the beta is closed, the beta and application pages both say so.
+  case "$name" in beta.html|apply.html) [ "$STATE" = closed ] && src=src/_beta-closed.html;; esac
   meta=$(head -n 1 "$src")
   title=$(echo "$meta" | cut -d'|' -f1 | sed 's/ *$//')
   desc=$(echo "$meta" | cut -d'|' -f2 | sed 's/^ *//; s/ *$//')
@@ -37,6 +40,7 @@ for src in src/*.html; do
     <a href="/roadmap.html"$(cur roadmap)>Roadmap</a>
     <a href="/milestones.html"$(cur milestones)>Milestones</a>
     <a href="/faq.html"$(cur faq)>Questions</a>
+    <a href="/contact.html"$(cur contact)>Contact</a>
   </nav>
 </div></header>
 <main>
@@ -47,11 +51,11 @@ EOF
 <footer class="site"><div class="wrap">
   <div>&copy; 2026 Winston Joseph-Ward. Encore Audio is a trade mark of Winston Joseph-Ward.<br>
   <a href="mailto:contact@encoreaudio.co.uk">contact@encoreaudio.co.uk</a></div>
-  <nav><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
+  <nav><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
 </div></footer>
 </body>
 </html>
 EOF
-  } | sed "s|APPLY_URL|$APPLY|g" > "$(echo "$name" | sed 's/^_beta-closed/beta/')"
+  } | sed "s|APPLY_URL|$APPLY|g; s|FORM_URL|$FORM|g" > "$name"
 done
 echo "Built (beta $STATE): $(ls src | grep -v '^_' | tr '\n' ' ')"

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply for the beta: Encore Audio</title>
+<meta name="description" content="Apply for one of 15 places in the free Encore Audio beta.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="16" fill="#4C8DFF"/><rect x="14" y="16" width="8" height="32" rx="2.8" fill="#0A1A3A"/><rect x="25" y="16" width="10" height="7" rx="2.6" fill="#0A1A3A"/><rect x="25" y="28.5" width="7" height="7" rx="2.6" fill="#0A1A3A"/><rect x="25" y="41" width="10" height="7" rx="2.6" fill="#0A1A3A"/><path d="M40 24 A11 11 0 0 1 40 40" fill="none" stroke="#0A1A3A" stroke-width="4" stroke-linecap="round"/><path d="M45 18 A18 18 0 0 1 45 46" fill="none" stroke="#0A1A3A" stroke-width="4" stroke-linecap="round"/></svg><span>Encore Audio&trade;</span></a>
+  <nav class="main">
+    <a href="/">Home</a>
+    <a href="/beta.html" aria-current="page">Beta</a>
+    <a href="/roadmap.html">Roadmap</a>
+    <a href="/milestones.html">Milestones</a>
+    <a href="/faq.html">Questions</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap doc">
+  <h1>Apply for the beta</h1>
+  <p class="muted">There are 15 places. We're choosing a mix of streamers, phones, DACs and libraries, so tell us about your system.
+    We reply to everyone who applies. See <a href="/beta.html">how the beta works</a>.</p>
+
+  <form class="js-form card form" action="https://formspree.io/f/mppqvkdq" method="POST" data-done="apply-done">
+    <input type="hidden" name="_subject" value="Encore Audio beta application">
+    <input type="hidden" name="form" value="beta application">
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="trap" aria-hidden="true">
+
+    <div class="field-row">
+      <label for="a-name">Your name<input id="a-name" name="name" type="text" required autocomplete="name"></label>
+      <label for="a-email">Email address<input id="a-email" name="email" type="email" required autocomplete="email">
+        <span class="hint">A Google account, if you'd like the Android app (Google Play testing needs one).</span></label>
+    </div>
+    <label for="a-country">Country<input id="a-country" name="country" type="text" required autocomplete="country-name"></label>
+
+    <fieldset>
+      <legend>Which streamers do you use?</legend>
+      <div class="checks">
+        <label><input type="checkbox" name="streamers" value="WiiM"> WiiM</label>
+        <label><input type="checkbox" name="streamers" value="HiFi Rose"> HiFi Rose</label>
+        <label><input type="checkbox" name="streamers" value="Bluesound"> Bluesound</label>
+        <label><input type="checkbox" name="streamers" value="Sonos"> Sonos</label>
+        <label><input type="checkbox" name="streamers" value="Cambridge Audio"> Cambridge Audio</label>
+        <label><input type="checkbox" name="streamers" value="Denon/Marantz (HEOS)"> Denon/Marantz (HEOS)</label>
+        <label><input type="checkbox" name="streamers" value="Naim"> Naim</label>
+        <label><input type="checkbox" name="streamers" value="None"> None</label>
+      </div>
+      <label for="a-other">Other streamers<input id="a-other" name="other streamers" type="text"></label>
+    </fieldset>
+
+    <div class="field-row">
+      <label for="a-phone">Android phone or tablet<input id="a-phone" name="android device" type="text" placeholder="e.g. Galaxy S25, Android 16 (or none)"></label>
+      <label for="a-dac">DAC and headphones you'd use with it<input id="a-dac" name="dac and headphones" type="text"></label>
+    </div>
+
+    <div class="field-row">
+      <label for="a-where">Where is your music?
+        <select id="a-where" name="music location" required>
+          <option value="">Choose…</option>
+          <option>On the Windows PC</option>
+          <option>On a NAS</option>
+          <option>Both</option>
+        </select></label>
+      <label for="a-size">Library size
+        <select id="a-size" name="library size" required>
+          <option value="">Choose…</option>
+          <option>Under 1,000 albums</option>
+          <option>1,000 – 5,000 albums</option>
+          <option>5,000 – 10,000 albums</option>
+          <option>Over 10,000 albums</option>
+        </select></label>
+    </div>
+
+    <fieldset>
+      <legend>Formats in your library</legend>
+      <div class="checks">
+        <label><input type="checkbox" name="formats" value="ALAC"> ALAC</label>
+        <label><input type="checkbox" name="formats" value="FLAC"> FLAC</label>
+        <label><input type="checkbox" name="formats" value="DSD"> DSD</label>
+        <label><input type="checkbox" name="formats" value="Hi-res (24-bit)"> Hi-res (24-bit)</label>
+        <label><input type="checkbox" name="formats" value="MP3/AAC"> MP3/AAC</label>
+      </div>
+    </fieldset>
+
+    <label for="a-now">What do you use now?
+      <select id="a-now" name="current player">
+        <option value="">Choose…</option>
+        <option>Roon</option><option>Audirvana</option><option>JRiver</option><option>Plex / Plexamp</option>
+        <option>Lyrion (LMS)</option><option>The streamer's own app</option><option>Something else</option>
+      </select></label>
+    <label for="a-matters">What matters most to you in a music player?<textarea id="a-matters" name="what matters" rows="4"></textarea></label>
+
+    <label class="check-line"><input type="checkbox" name="two weeks" value="yes" required>
+      I can use Encore Audio regularly for at least two weeks and send feedback.</label>
+    <label class="check-line"><input type="checkbox" name="personal key" value="agreed" required>
+      I understand my beta key and download are personal, and I won't share them.</label>
+
+    <p class="muted small">We use your answers only to choose testers and run the beta. See the <a href="/privacy.html">privacy policy</a>.</p>
+    <div class="form-actions"><button class="btn primary" type="submit">Send application</button><span class="form-status" role="status"></span></div>
+  </form>
+
+  <div id="apply-done" class="callout" hidden tabindex="-1">
+    <strong>Thanks for applying!</strong> We'll be in touch by email either way once we've chosen the testers.
+  </div>
+</div>
+<script src="/assets/forms.js" defer></script>
+</main>
+<footer class="site"><div class="wrap">
+  <div>&copy; 2026 Winston Joseph-Ward. Encore Audio is a trade mark of Winston Joseph-Ward.<br>
+  <a href="mailto:contact@encoreaudio.co.uk">contact@encoreaudio.co.uk</a></div>
+  <nav><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
+</div></footer>
+</body>
+</html>

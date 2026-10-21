@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact: Encore Audio</title>
+<meta name="description" content="Questions, feedback or press enquiries about Encore Audio: send us a message.">
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="16" fill="#4C8DFF"/><rect x="14" y="16" width="8" height="32" rx="2.8" fill="#0A1A3A"/><rect x="25" y="16" width="10" height="7" rx="2.6" fill="#0A1A3A"/><rect x="25" y="28.5" width="7" height="7" rx="2.6" fill="#0A1A3A"/><rect x="25" y="41" width="10" height="7" rx="2.6" fill="#0A1A3A"/><path d="M40 24 A11 11 0 0 1 40 40" fill="none" stroke="#0A1A3A" stroke-width="4" stroke-linecap="round"/><path d="M45 18 A18 18 0 0 1 45 46" fill="none" stroke="#0A1A3A" stroke-width="4" stroke-linecap="round"/></svg><span>Encore Audio&trade;</span></a>
+  <nav class="main">
+    <a href="/">Home</a>
+    <a href="/beta.html">Beta</a>
+    <a href="/roadmap.html">Roadmap</a>
+    <a href="/milestones.html">Milestones</a>
+    <a href="/faq.html">Questions</a>
+    <a href="/contact.html" aria-current="page">Contact</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap doc">
+  <h1>Contact us</h1>
+  <p class="muted">Questions, feedback, a problem, or press and partnership enquiries: send a message and we'll reply within a couple of days.
+    Beta testers: for problems, the <a href="/beta.html#feedback">feedback tips</a> help us fix things faster.</p>
+
+  <form class="js-form card form" action="https://formspree.io/f/mppqvkdq" method="POST" data-done="contact-done">
+    <input type="hidden" name="_subject" value="Encore Audio website: new message">
+    <input type="hidden" name="form" value="contact">
+    <!-- Spam trap: people never see or fill this in. -->
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="trap" aria-hidden="true">
+
+    <div class="field-row">
+      <label for="c-name">Your name<input id="c-name" name="name" type="text" required autocomplete="name"></label>
+      <label for="c-email">Email address<input id="c-email" name="email" type="email" required autocomplete="email"></label>
+    </div>
+    <label for="c-topic">What's it about?
+      <select id="c-topic" name="topic" required>
+        <option value="General question">General question</option>
+        <option value="The beta">The beta</option>
+        <option value="Problem or bug">Problem or bug</option>
+        <option value="Press and partnerships">Press and partnerships</option>
+      </select>
+    </label>
+    <label for="c-message">Message<textarea id="c-message" name="message" rows="7" required></textarea></label>
+    <p class="muted small">We use your details only to reply. See the <a href="/privacy.html">privacy policy</a>.</p>
+    <div class="form-actions"><button class="btn primary" type="submit">Send message</button><span class="form-status" role="status"></span></div>
+  </form>
+
+  <div id="contact-done" class="callout" hidden tabindex="-1">
+    <strong>Thanks, your message is on its way.</strong> We'll reply to the email address you gave, usually within a couple of days.
+  </div>
+
+  <p class="muted" style="margin-top:22px">Rather email? Write to <strong>contact@encoreaudio.co.uk</strong>.</p>
+</div>
+<script src="/assets/forms.js" defer></script>
+</main>
+<footer class="site"><div class="wrap">
+  <div>&copy; 2026 Winston Joseph-Ward. Encore Audio is a trade mark of Winston Joseph-Ward.<br>
+  <a href="mailto:contact@encoreaudio.co.uk">contact@encoreaudio.co.uk</a></div>
+  <nav><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
+</div></footer>
+</body>
+</html>
