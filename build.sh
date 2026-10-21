@@ -4,7 +4,12 @@
 set -e
 cd "$(dirname "$0")"
 LOGO='<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" rx="16" fill="#4C8DFF"/><rect x="14" y="16" width="8" height="32" rx="2.8" fill="#0A1A3A"/><rect x="25" y="16" width="10" height="7" rx="2.6" fill="#0A1A3A"/><rect x="25" y="28.5" width="7" height="7" rx="2.6" fill="#0A1A3A"/><rect x="25" y="41" width="10" height="7" rx="2.6" fill="#0A1A3A"/><path d="M40 24 A11 11 0 0 1 40 40" fill="none" stroke="#0A1A3A" stroke-width="4" stroke-linecap="round"/><path d="M45 18 A18 18 0 0 1 45 46" fill="none" stroke="#0A1A3A" stroke-width="4" stroke-linecap="round"/></svg>'
+# Beta page: beta-state holds "open" (applications, with the form link from apply-url) or "closed" (the beta is full).
+STATE=$(tr -d '\r\n ' < beta-state 2>/dev/null || echo open)
+APPLY=$(tr -d '\r\n ' < apply-url 2>/dev/null)
 for src in src/*.html; do
+  case "$(basename "$src")" in _*) continue;; esac
+  [ "$(basename "$src")" = beta.html ] && [ "$STATE" = closed ] && src=src/_beta-closed.html
   name=$(basename "$src")
   meta=$(head -n 1 "$src")
   title=$(echo "$meta" | cut -d'|' -f1 | sed 's/ *$//')
@@ -47,6 +52,6 @@ EOF
 </body>
 </html>
 EOF
-  } > "$name"
+  } | sed "s|APPLY_URL|$APPLY|g" > "$(echo "$name" | sed 's/^_beta-closed/beta/')"
 done
-echo "Built: $(ls src | tr '\n' ' ')"
+echo "Built (beta $STATE): $(ls src | grep -v '^_' | tr '\n' ' ')"
