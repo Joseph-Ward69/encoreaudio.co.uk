@@ -134,3 +134,13 @@ form.form .trap { position: absolute; left: -9999px; width: 1px; height: 1px; op
 .form-status { color: var(--muted); font-size: 14.5px; }
 .form-status.error { color: #e8a33d; }
 [hidden] { display: none !important; }
+
+/* Demo video: a still with a play button until the visitor presses play */
+figure.shot.video { max-width: 340px; margin: 26px auto 8px; text-align: center; }
+.video-play, .video-frame { position: relative; display: block; width: 100%; aspect-ratio: 3 / 7; padding: 0; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #000; cursor: pointer; }
+.video-play img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.8; }
+.video-play:hover img, .video-play:focus-visible img { opacity: 1; }
+.video-play:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.video-icon { position: absolute; left: 50%; top: 50%; width: 78px; height: 78px; margin: -39px 0 0 -39px; border-radius: 50%; background: var(--accent); box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+.video-icon::after { content: ""; position: absolute; left: 31px; top: 24px; border-style: solid; border-width: 15px 0 15px 24px; border-color: transparent transparent transparent var(--accent-ink); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
