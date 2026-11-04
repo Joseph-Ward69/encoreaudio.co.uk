@@ -88,6 +88,7 @@ figure.shot { margin: 0; display: grid; gap: 8px; }
 figure.shot img { display: block; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
 figure.shot figcaption { color: var(--muted); font-size: 14.5px; }
 figure.shot.wide { margin: 8px 0 22px; }
+figure.shot.advert video { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: #0b1120; }
 .phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 6px 0 22px; }
 .phones figure.shot img { border-radius: 18px; }
 @media (max-width: 640px) { .phones { grid-template-columns: repeat(3, minmax(160px, 1fr)); overflow-x: auto; padding-bottom: 6px; } }
