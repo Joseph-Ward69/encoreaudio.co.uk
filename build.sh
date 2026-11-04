@@ -51,7 +51,7 @@ EOF
 <footer class="site"><div class="wrap">
   <div>&copy; 2026 Winston Joseph-Ward. Encore Audio is a trade mark of Winston Joseph-Ward.<br>
   <a href="mailto:contact@encoreaudio.co.uk">contact@encoreaudio.co.uk</a></div>
-  <nav><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
+  <nav><a class="insta" href="https://www.instagram.com/encoreaudiouk/" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Follow us on Instagram</a><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
 </div></footer>
 </body>
 </html>

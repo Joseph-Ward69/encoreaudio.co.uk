@@ -76,6 +76,8 @@ footer.site { border-top: 1px solid var(--line); margin-top: 48px; padding: 28px
 footer.site .wrap { display: flex; gap: 18px 28px; flex-wrap: wrap; justify-content: space-between; }
 footer.site nav { display: flex; gap: 16px; flex-wrap: wrap; }
 footer.site a { color: var(--muted); }
+a.insta, footer.site a.insta { display: inline-flex; align-items: center; gap: 7px; color: #f49ac8; font-weight: 600; }
+a.insta svg { flex: none; }
 
 /* Screenshots */
 figure.shot { margin: 0; display: grid; gap: 8px; }
