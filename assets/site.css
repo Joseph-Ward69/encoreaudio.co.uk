@@ -1,22 +1,16 @@
 /* Encore Audio website. No web fonts, trackers or scripts from other sites: system fonts only. */
+/* Always dark, on every device (a white page was tiring to read), with softer contrast than pure black and white. */
 :root {
-  --bg: #0b111c;
-  --panel: #121a2a;
-  --panel2: #18233a;
-  --line: #24314b;
-  --text: #e8edf6;
-  --muted: #93a1b8;
-  --accent: #4c8dff;
+  --bg: #080d16;
+  --panel: #0f1624;
+  --panel2: #151f33;
+  --line: #222e45;
+  --text: #e3e9f3;
+  --muted: #b3bfd2;
+  --accent: #5b96ff;
   --accent-ink: #0a1a3a;
   --radius: 14px;
   color-scheme: dark;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #f6f8fc; --panel: #ffffff; --panel2: #eef2f9; --line: #d9e0ec;
-    --text: #0e1626; --muted: #55627a; --accent: #2f6fe4; --accent-ink: #ffffff;
-    color-scheme: light;
-  }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -234,12 +228,13 @@ figure.shot:hover img { transform: translateY(-3px); box-shadow: 0 24px 60px -24
 .js-motion .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .js-motion .reveal.in { opacity: 1; transform: none; }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .blob { opacity: .25; }
-  :root:not([data-theme="dark"]) .rings i { border-color: rgba(47, 111, 228, .3); }
-  :root:not([data-theme="dark"]) .badge:nth-child(n),
-  :root:not([data-theme="dark"]) .marquee span:nth-child(n) { color: var(--text); }
-}
+/* Easier on the eyes: calmer glows behind the headline, and descriptions in bold so they read clearly. */
+.blob { opacity: .3; }
+.blob.b3 { opacity: .2; }
+.rings i { border-color: rgba(124, 164, 255, .25); }
+.hero p.lead, .card p, details p, .timeline p, .timeline ul, figure.shot figcaption,
+.steps li .muted, .callout p, .doc p, .doc li, .download .meta { font-weight: 600; }
+.card h3, .doc h2, .doc h3 { font-weight: 700; }
 @media (prefers-reduced-motion: reduce) {
   .blob, .rings i, .grad, .video-icon, .eq span, .marquee .track { animation: none !important; }
   .rings { display: none; }
