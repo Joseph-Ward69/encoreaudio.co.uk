@@ -39,6 +39,7 @@ for src in src/*.html; do
     <a href="/beta.html"$(cur beta)>Beta</a>
     <a href="/roadmap.html"$(cur roadmap)>Roadmap</a>
     <a href="/milestones.html"$(cur milestones)>Milestones</a>
+    <a href="/story.html"$(cur story)>Our story</a>
     <a href="/faq.html"$(cur faq)>Questions</a>
     <a href="/contact.html"$(cur contact)>Contact</a>
   </nav>
@@ -53,7 +54,7 @@ EOF
   Encore Audio Ltd, registered in England and Wales, company number 17539933.<br>
   Registered office: 128 City Road, London EC1V 2NX.<br>
   <a href="mailto:contact@encoreaudio.co.uk">contact@encoreaudio.co.uk</a></div>
-  <nav><a class="insta" href="https://www.instagram.com/encoreaudiouk/" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Follow us on Instagram</a><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
+  <nav><a class="insta" href="https://www.instagram.com/encoreaudiouk/" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Follow us on Instagram</a><a href="/beta.html">Beta</a><a href="/roadmap.html">Roadmap</a><a href="/milestones.html">Milestones</a><a href="/story.html">Our story</a><a href="/faq.html">Questions</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/licence.html">Licence agreement</a></nav>
 </div></footer>
 </body>
 </html>
